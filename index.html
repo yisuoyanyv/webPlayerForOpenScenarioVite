@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenScenario/OpenDrive Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 简单的内联样式，用于初步设置提示信息的显示样式，你也可以将其移到styles.css文件中进行更细致的样式设置 */
+       .path-hint {
+            font-size: 12px;
+            color: gray;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="file-input-group">
+        <label for="fileInputOpenScenario">OpenSCENARIO文件：</label>
+        <input type="file" id="fileInputOpenScenario" />
+        <span id="openscenarioPathHint" class="path-hint"></span>
+    </div>
+    <br>
+    <div class="file-input-group">
+        <label for="fileInputOpenDrive">OpenDRIVE文件：</label>
+        <input type="file" id="fileInputOpenDrive" />
+        <span id="opendrivePathHint" class="path-hint"></span>
+    </div>
+    <br>
+    <div id="scene-container"></div>
+    <button id="playButton">播放</button>
+    <button id="pauseButton">暂停</button>
+    <button id="overviewButton">俯瞰视角</button>
+    <button id="followButton">跟随视角</button>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
